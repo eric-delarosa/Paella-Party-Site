@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Paella Party NJ</title>
+    <meta name="description" content="Explore our authentic Spanish paella catering services for private events, corporate functions, and weddings throughout New Jersey.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Additional Services Page Styles */
+        .service-section {
+            padding: var(--spacing-xl) 0;
+        }
+        
+        .service-section:nth-child(even) {
+            background-color: var(--cream);
+        }
+        
+        .service-section:nth-child(odd) {
+            background-color: var(--white);
+        }
+        
+        .service-image {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 400px;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .service-content {
+            padding: var(--spacing-md);
+        }
+        
+        .service-title {
+            color: var(--terracotta-red);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .service-features {
+            list-style: none;
+            margin: var(--spacing-md) 0;
+        }
+        
+        .service-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .service-feature i {
+            color: var(--saffron-yellow);
+            margin-right: var(--spacing-xs);
+            margin-top: 5px;
+        }
+        
+        .service-cta {
+            margin-top: var(--spacing-md);
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-md) 0;
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-table th,
+        .pricing-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+        
+        .pricing-table th {
+            background-color: var(--navy-blue);
+            color: var(--white);
+        }
+        
+        .pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .pricing-table tr:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .pricing-note {
+            font-style: italic;
+            color: var(--dark-gray);
+            margin-top: var(--spacing-sm);
+        }
+        
+        .equipment-section {
+            background-color: var(--light-gray);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            margin-top: var(--spacing-md);
+        }
+        
+        .equipment-title {
+            color: var(--navy-blue);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .equipment-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .equipment-item {
+            flex: 0 0 50%;
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .equipment-item i {
+            color: var(--terracotta-red);
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 767px) {
+            .service-image {
+                height: 300px;
+                margin-bottom: var(--spacing-md);
+            }
+            
+            .equipment-item {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">Paella Party NJ</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="menu.html" class="nav-link">Our Menu</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <a href="contact.html" class="book-now-btn">Book Now</a>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner" style="background-image: url('paellapartypics/IMG-20250214-WA0030.jpg');">
+        <div class="container">
+            <h1 class="page-title">Our Services</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>Services</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Introduction -->
+    <section class="section services-intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col col-8 col-md-12 offset-2 offset-md-0">
+                    <div class="services-intro-content text-center">
+                        <h2 class="section-title">Authentic Spanish Catering</h2>
+                        <p>At Paella Party NJ, we offer full-service Spanish paella catering for a variety of events throughout New Jersey. Chef Diego brings over 40 years of culinary expertise to every event, ensuring an authentic and memorable dining experience for you and your guests.</p>
+                        <p>From intimate family gatherings to large corporate events and elegant weddings, we customize our services to meet your specific needs and preferences. Our interactive cooking display adds a unique element to your event, as guests can watch Chef Diego prepare the paella fresh on-site.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Private Events Section -->
+    <section id="private" class="service-section">
+        <div class="container">
+            <div class="row">
+                <div class="col col-6 col-md-12">
+                    <div class="service-image fade-in">
+                        <img src="paellapartypics/IMG-20250214-WA0030.jpg" alt="Private Event Catering">
+                    </div>
+                </div>
+                <div class="col col-6 col-md-12">
+                    <div class="service-content fade-right">
+                        <h2 class="service-title">Private Events</h2>
+                        <p>Make your special occasion truly memorable with our authentic Spanish paella catering. Whether you're hosting a birthday party, anniversary celebration, family reunion, or any other private gathering, Chef Diego will create a culinary experience that your guests will talk about for years to come.</p>
+                        
+                        <ul class="service-features">
+                            <li class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Customizable Menu Options</strong>
+                                    <p>Choose from our variety of paella options and tapas to create a menu that suits your taste and preferences.</p>
+                                </div>
+                            </li>
+                            <li class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Interactive Cooking Display</strong>
+                                    <p>Chef Diego prepares the paella fresh on-site, creating an engaging culinary show for your guests.</p>
+                                </div>
+                            </li>
+                            <li class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Flexible Serving Styles</strong>
+                                    <p>Choose between buffet-style service or family-style serving at the table.</p>
+                                </div>
+                            </li>
+                            <li class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Accommodates All Group Sizes</strong>
+                                    <p>From intimate gatherings of 10 to larger parties of 100+, we can scale our services to fit your needs.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <div class="service-cta">
+                            <a href="contact.html" class="btn">Inquire About Private Events</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Catering Section -->
+    <section id="corporate" class="service-section">
+        <div class="container">
+            <div class="row">
+                <div class="col col-6 col-md-12 order-2 order-md-1">
+                    <div class="service-content fade-left">
+                        <h2 class="service-title">Corporate Catering</h2>
+                        <p>Impress your clients, reward your team, or enhance your company event with our unique Spanish paella catering. Our corporate catering services provide a refreshing alternative to standard business catering, creating a memorable experience that fosters connection and conversation.</p>
+                        
+                        <ul class="service-features">
+                            <li class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Professional Service</strong>
+                                    <p>Our experienced team ensures smooth, professional service from setup to cleanup.</p>
+                                </div>
+                            </li>
+                            <li class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Flexible Scheduling</strong>
+                                    <p>We accommodate lunch meetings, evening receptions, all-day conferences, and more.</p>
+                                </div>
+                            </li>
+                            <li class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Team Building Experience</strong>
+                                    <p>The interactive nature of paella preparation creates a unique team-building opportunity.</p>
+                                </div>
+                            </li>
+                            <li class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Customized Corporate Packages</strong>
+                                    <p>We offer special packages designed specifically for corporate clients, including options for recurring events.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <div class="service-cta">
+                            <a href="contact.html" class="btn">Corporate Catering Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-6 col-md-12 order-1 order-md-2">
+                    <div class="service-image fade-in">
+                        <img src="paellapartypics/IMG-20250214-WA0040.jpg" alt="Corporate Catering">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Catering Section -->
+    <section id="weddings" class="service-section">
+        <div class="container">
+            <div class="row">
+                <div class="col col-6 col-md-12">
+                    <div class="service-image fade-in">
+                        <img src="paellapartypics/IMG-20250214-WA0050.jpg" alt="Wedding Catering">
+                    </div>
+                </div>
+                <div class="col col-6 col-md-12">
+                    <div class="service-content fade-right">
+                        <h2 class="service-title">Wedding Catering</h2>
+                        <p>Make your wedding day even more special with our authentic Spanish paella catering. Our unique culinary experience adds a touch of Mediterranean flair to your celebration, creating a memorable dining experience for you and your guests.</p>
+                        
+                        <ul class="service-features">
+                            <li class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Customized Wedding Packages</strong>
+                                    <p>We work closely with you to create a menu that complements your wedding theme and satisfies your guests.</p>
+                                </div>
+                            </li>
+                            <li class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Elegant Presentation</strong>
+                                    <p>Our paella stations are beautifully presented to enhance your wedding décor.</p>
+                                </div>
+                            </li>
+                            <li class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Cocktail Hour Options</strong>
+                                    <p>Spanish tapas make perfect appetizers during your cocktail hour.</p>
+                                </div>
+                            </li>
+                            <li class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Coordination with Wedding Planners</strong>
+                                    <p>We work seamlessly with your wedding planner to ensure everything runs smoothly.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <div class="service-cta">
+                            <a href="contact.html" class="btn">Wedding Catering Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section pricing-section">
+        <div class="container">
+            <h2 class="section-title">Pricing Information</h2>
+            <div class="row">
+                <div class="col col-10 col-md-12 offset-1 offset-md-0">
+                    <p class="text-center">Our pricing is based on the type of paella, number of guests, and additional services required. Below is a general pricing guide to help you plan your event.</p>
+                    
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Group Size</th>
+                                <th>Standard Paellas</th>
+                                <th>Premium Paellas</th>
+                                <th>Additional Services</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10-19 guests</td>
+                                <td>$30-35 per person</td>
+                                <td>$35-40 per person</td>
+                                <td>Tapas: $3-6 per item per person<br>Sangria: $12 per person</td>
+                            </tr>
+                            <tr>
+                                <td>20-49 guests</td>
+                                <td>$25-30 per person</td>
+                                <td>$30-35 per person</td>
+                                <td>Tapas: $3-6 per item per person<br>Sangria: $10 per person</td>
+                            </tr>
+                            <tr>
+                                <td>50+ guests</td>
+                                <td>$20-25 per person</td>
+                                <td>$25-30 per person</td>
+                                <td>Tapas: $3-5 per item per person<br>Sangria: $8 per person</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p class="pricing-note">* Standard Paellas include Valenciana Mixta, Castellana, and Vegetarian. Premium Paellas include Valenciana Authentica, Marinera, and Negra.</p>
+                    <p class="pricing-note">* Minimum order requirements apply. Please contact us for a customized quote for your specific event.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment & Setup Section -->
+    <section class="section equipment-setup-section">
+        <div class="container">
+            <h2 class="section-title">Equipment & Setup</h2>
+            <div class="row">
+                <div class="col col-6 col-md-12">
+                    <div class="equipment-content fade-right">
+                        <p>At Paella Party NJ, we bring everything needed to prepare and serve authentic paella at your event. Our self-contained setup allows us to cook in almost any location, whether indoors or outdoors.</p>
+                        
+                        <div class="equipment-section">
+                            <h3 class="equipment-title">What We Provide:</h3>
+                            <div class="equipment-list">
+                                <div class="equipment-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>Traditional paella pans (various sizes)</span>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-fire"></i>
+                                    <span>Propane burners and fuel</span>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-table"></i>
+                                    <span>Serving tables and stations</span>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-plate-wheat"></i>
+                                    <span>High-quality disposable plates & utensils</span>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-hands-holding"></i>
+                                    <span>Serving utensils and equipment</span>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-broom"></i>
+                                    <span>Complete cleanup after service</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="mt-4">For an additional fee, we can also provide:</p>
+                        <ul>
+                            <li>Premium china plates and silverware</li>
+                            <li>Linen tablecloths and napkins</li>
+                            <li>Decorative elements with Spanish/Mediterranean theme</li>
+                            <li>Staffed service for larger events</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-6 col-md-12">
+                    <div class="service-image fade-in">
+                        <img src="paellapartypics/IMG-20250214-WA0020.jpg" alt="Paella Cooking Setup">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Section -->
+    <section class="section service-area-section">
+        <div class="container">
+            <h2 class="section-title">Our Service Area</h2>
+            <div class="row">
+                <div class="col col-8 col-md-12 offset-2 offset-md-0">
+                    <div class="service-area-content text-center">
+                        <p>Paella Party NJ proudly serves the entire state of New Jersey, including but not limited to:</p>
+                        
+                        <div class="service-area-grid">
+                            <div class="service-area-region">
+                                <h3>Northern NJ</h3>
+                                <p>Bergen, Essex, Hudson, Morris, Passaic, Sussex, Union, Warren Counties</p>
+                            </div>
+                            <div class="service-area-region">
+                                <h3>Central NJ</h3>
+                                <p>Hunterdon, Mercer, Middlesex, Monmouth, Somerset Counties</p>
+                            </div>
+                            <div class="service-area-region">
+                                <h3>Southern NJ</h3>
+                                <p>Atlantic, Burlington, Camden, Cape May, Cumberland, Gloucester, Ocean, Salem Counties</p>
+                            </div>
+                        </div>
+                        
+                        <p class="mt-4">We also serve select areas in New York City, Philadelphia, and Eastern Pennsylvania for an additional travel fee.</p>
+                        
+                        <div class="service-cta mt-4">
+                            <a href="contact.html" class="btn">Check Availability for Your Location</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="row">
+                <div class="col col-8 col-md-12 offset-2 offset-md-0">
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <h3 class="faq-question">How far in advance should I book your services?</h3>
+                            <div class="faq-answer">
+                                <p>We recommend booking at least 4-6 weeks in advance for most events, and 2-3 months for weddings and large corporate events, especially during peak season (May-September).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3 class="faq-question">What is the minimum number of guests you cater for?</h3>
+                            <div class="faq-answer">
+                                <p>Our minimum is typically 10 guests, but we can accommodate smaller groups with an adjusted pricing structure. Please contact us for details.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3 class="faq-question">Can you accommodate dietary restrictions?</h3>
+                            <div class="faq-answer">
+                                <p>Yes, we can accommodate vegetarian, vegan, gluten-free, and most allergy-related dietary restrictions with advance notice. Please inform us of any special requirements when booking.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3 class="faq-question">How much space do you need for setup?</h3>
+                            <div class="faq-answer">
+                                <p>We typically need a 10' x 10' area for our cooking station. This can be indoors or outdoors, as long as there is proper ventilation if indoors.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3 class="faq-question">Do you require a deposit?</h3>
+                            <div class="faq-answer">
+                                <p>Yes, we require a 50% deposit to secure your date, with the balance due one week before the event.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" style="background-image: url('paellapartypics/IMG-20250214-WA0060.jpg');">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Book Your Paella Party?</h2>
+                <p class="cta-text">Contact us today to discuss your event and check availability.</p>
+                <a href="contact.html" class="cta-btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col col-4 col-md-6 col-sm-12">
+                    <div class="footer-logo">
+                        <span class="footer-logo-text">Paella Party NJ</span>
+                    </div>
+                    <p class="footer-desc">Authentic Spanish paella catering for all your special events. Bringing the taste of Spain to New Jersey for over 10 years.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col col-4 col-md-6 col-sm-12">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html">Home</a></li>
+                        <li class="footer-link"><a href="about.html">About Us</a></li>
+                        <li class="footer-link"><a href="menu.html">Our Menu</a></li>
+                        <li class="footer-link"><a href="gallery.html">Gallery</a></li>
+                        <li class="footer-link"><a href="services.html">Services</a></li>
+                        <li class="footer-link"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col col-4 col-md-6 col-sm-12">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li class="footer-link"><i class="fas fa-envelope"></i> info@paellapartynj.com</li>
+                        <li class="footer-link"><i class="fas fa-map-marker-alt"></i> Serving all of New Jersey</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Paella Party NJ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

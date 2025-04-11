@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Paella Party NJ</title>
+    <meta name="description" content="Browse our gallery of authentic Spanish paella catering events. See our delicious paellas, cooking process, and happy clients at various events across New Jersey.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Additional Gallery Page Styles */
+        .gallery-container {
+            padding: var(--spacing-md) 0;
+        }
+        
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .gallery-filter-btn {
+            padding: 8px 20px;
+            background-color: var(--light-gray);
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            transition: all var(--transition-fast);
+        }
+        
+        .gallery-filter-btn.active,
+        .gallery-filter-btn:hover {
+            background-color: var(--saffron-yellow);
+            color: var(--charcoal);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-sm);
+            height: 250px;
+            cursor: pointer;
+            transition: transform var(--transition-medium);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-medium);
+        }
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity var(--transition-medium);
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-icon {
+            color: var(--white);
+            font-size: 2rem;
+        }
+        
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: var(--white);
+            font-size: 3rem;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 767px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">Paella Party NJ</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="menu.html" class="nav-link">Our Menu</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <a href="contact.html" class="book-now-btn">Book Now</a>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner" style="background-image: url('paellapartypics/IMG-20250214-WA0010.jpg');">
+        <div class="container">
+            <h1 class="page-title">Gallery</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>Gallery</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Introduction -->
+    <section class="section gallery-intro-section">
+        <div class="container">
+            <h2 class="section-title">Our Paella Events</h2>
+            <div class="row">
+                <div class="col col-8 col-md-12 offset-2 offset-md-0">
+                    <div class="gallery-intro-content text-center">
+                        <p>Browse through our gallery to see Chef Diego in action, our authentic paellas, and the memorable events we've catered. From intimate family gatherings to large corporate events and weddings, we bring the taste of Spain to every occasion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-container">
+        <div class="container">
+            <div class="gallery-filter">
+                <button class="gallery-filter-btn active" data-filter="all">All</button>
+                <button class="gallery-filter-btn" data-filter="paella">Paella Dishes</button>
+                <button class="gallery-filter-btn" data-filter="cooking">Cooking Process</button>
+                <button class="gallery-filter-btn" data-filter="events">Events</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Paella Dishes -->
+                <div class="gallery-item paella" onclick="openLightbox('paellapartypics/IMG-20250214-WA0002.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0002.jpg" alt="Seafood Paella" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item paella" onclick="openLightbox('paellapartypics/IMG-20250214-WA0003.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0003.jpg" alt="Paella Valenciana" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item paella" onclick="openLightbox('paellapartypics/IMG-20250214-WA0010.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0010.jpg" alt="Mixed Paella" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item paella" onclick="openLightbox('paellapartypics/IMG-20250214-WA0012.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0012.jpg" alt="Paella Close-up" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <!-- Cooking Process -->
+                <div class="gallery-item cooking" onclick="openLightbox('paellapartypics/IMG-20250214-WA0020.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0020.jpg" alt="Cooking Paella" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item cooking" onclick="openLightbox('paellapartypics/IMG-20250214-WA0021.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0021.jpg" alt="Paella Preparation" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item cooking" onclick="openLightbox('paellapartypics/IMG-20250214-WA0022.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0022.jpg" alt="Chef Diego Cooking" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item cooking" onclick="openLightbox('paellapartypics/IMG-20250214-WA0023.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0023.jpg" alt="Adding Ingredients" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <!-- Events -->
+                <div class="gallery-item events" onclick="openLightbox('paellapartypics/IMG-20250214-WA0030.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0030.jpg" alt="Private Event" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item events" onclick="openLightbox('paellapartypics/IMG-20250214-WA0031.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0031.jpg" alt="Outdoor Catering" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item events" onclick="openLightbox('paellapartypics/IMG-20250214-WA0040.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0040.jpg" alt="Corporate Event" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item events" onclick="openLightbox('paellapartypics/IMG-20250214-WA0050.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0050.jpg" alt="Wedding Catering" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <!-- More Paella Dishes -->
+                <div class="gallery-item paella" onclick="openLightbox('paellapartypics/IMG-20250214-WA0004.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0004.jpg" alt="Paella Negra" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item paella" onclick="openLightbox('paellapartypics/IMG-20250214-WA0005.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0005.jpg" alt="Vegetarian Paella" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <!-- More Cooking Process -->
+                <div class="gallery-item cooking" onclick="openLightbox('paellapartypics/IMG-20250214-WA0024.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0024.jpg" alt="Cooking Setup" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item cooking" onclick="openLightbox('paellapartypics/IMG-20250214-WA0025.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0025.jpg" alt="Paella Cooking" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <!-- More Events -->
+                <div class="gallery-item events" onclick="openLightbox('paellapartypics/IMG-20250214-WA0051.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0051.jpg" alt="Family Gathering" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item events" onclick="openLightbox('paellapartypics/IMG-20250214-WA0052.jpg')">
+                    <img src="paellapartypics/IMG-20250214-WA0052.jpg" alt="Backyard Party" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus gallery-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="section video-section">
+        <div class="container">
+            <h2 class="section-title">Paella in Action</h2>
+            <div class="row">
+                <div class="col col-8 col-md-12 offset-2 offset-md-0">
+                    <div class="video-container">
+                        <video controls poster="paellapartypics/PXL_20250222_173009586.MP.jpg" class="responsive-video">
+                            <source src="paellapartypics/VID-20250214-WA0064.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-caption text-center">
+                        <p>Watch Chef Diego prepare a traditional paella at a recent event.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" style="background-image: url('paellapartypics/IMG-20250214-WA0060.jpg');">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Create Your Own Paella Memories?</h2>
+                <p class="cta-text">Contact us today to book Chef Diego for your next event.</p>
+                <a href="contact.html" class="cta-btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col col-4 col-md-6 col-sm-12">
+                    <div class="footer-logo">
+                        <span class="footer-logo-text">Paella Party NJ</span>
+                    </div>
+                    <p class="footer-desc">Authentic Spanish paella catering for all your special events. Bringing the taste of Spain to New Jersey for over 10 years.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col col-4 col-md-6 col-sm-12">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html">Home</a></li>
+                        <li class="footer-link"><a href="about.html">About Us</a></li>
+                        <li class="footer-link"><a href="menu.html">Our Menu</a></li>
+                        <li class="footer-link"><a href="gallery.html">Gallery</a></li>
+                        <li class="footer-link"><a href="services.html">Services</a></li>
+                        <li class="footer-link"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col col-4 col-md-6 col-sm-12">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li class="footer-link"><i class="fas fa-envelope"></i> info@paellapartynj.com</li>
+                        <li class="footer-link"><i class="fas fa-map-marker-alt"></i> Serving all of New Jersey</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Paella Party NJ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

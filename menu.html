@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu - Paella Party NJ</title>
+    <meta name="description" content="Explore our authentic Spanish paella menu featuring Valenciana, Marinera, Negra, and more. We also offer tapas, sangria, and desserts for your special events.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Additional Menu Page Styles */
+        .menu-category {
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .menu-category-title {
+            color: var(--terracotta-red);
+            margin-bottom: var(--spacing-md);
+            text-align: center;
+            font-family: var(--accent-font);
+            font-size: 2rem;
+        }
+        
+        .menu-list {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu-list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-sm) 0;
+            border-bottom: 1px dashed var(--medium-gray);
+        }
+        
+        .menu-list-item:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-item-info {
+            flex: 1;
+        }
+        
+        .menu-item-name {
+            font-weight: 700;
+            color: var(--navy-blue);
+            margin-bottom: 5px;
+        }
+        
+        .menu-item-desc {
+            color: var(--dark-gray);
+            font-size: var(--small-size);
+        }
+        
+        .menu-item-price {
+            font-weight: 700;
+            color: var(--terracotta-red);
+            margin-left: var(--spacing-sm);
+            white-space: nowrap;
+        }
+        
+        .menu-featured {
+            background-color: var(--cream);
+            padding: var(--spacing-xs);
+            border-radius: var(--radius-sm);
+            color: var(--olive-green);
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-left: var(--spacing-xs);
+            text-transform: uppercase;
+        }
+        
+        .menu-note {
+            background-color: var(--light-gray);
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            margin-top: var(--spacing-md);
+            font-style: italic;
+        }
+        
+        .menu-note p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">Paella Party NJ</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="menu.html" class="nav-link active">Our Menu</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <a href="contact.html" class="book-now-btn">Book Now</a>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner" style="background-image: url('paellapartypics/IMG-20250214-WA0010.jpg');">
+        <div class="container">
+            <h1 class="page-title">Our Menu</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>Our Menu</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Introduction -->
+    <section class="section menu-intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col col-6 col-md-12">
+                    <div class="menu-intro-content fade-right">
+                        <h2 class="section-title">Authentic Spanish Cuisine</h2>
+                        <p>At Paella Party NJ, we take pride in offering authentic Spanish cuisine made with the finest ingredients and traditional cooking methods. Our menu features a variety of paella options, from the classic Valenciana to the dramatic Negra, as well as a selection of Spanish tapas and other specialties.</p>
+                        <p>All of our dishes are prepared fresh on-site by Chef Diego, ensuring the highest quality and most authentic flavors. We can customize our menu to accommodate your preferences and dietary requirements, making your event truly special.</p>
+                    </div>
+                </div>
+                <div class="col col-6 col-md-12">
+                    <div class="menu-intro-img fade-in">
+                        <img src="paellapartypics/IMG-20250214-WA0002.jpg" alt="Paella Valenciana">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paella Menu Section -->
+    <section class="section menu-section">
+        <div class="container">
+            <h2 class="section-title">Our Paella Selection</h2>
+            <p class="text-center">All paellas are priced per person and prepared fresh on-site.</p>
+            
+            <div class="menu-category">
+                <div class="menu-list">
+                    <div class="menu-list-item">
+                        <div class="menu-item-info">
+                            <h3 class="menu-item-name">Valenciana Mixta <span class="menu-featured">Popular</span></h3>
+                            <p class="menu-item-desc">Mixed paella with chicken and seafood, flavored with saffron, bell peppers, and green beans.</p>
+                        </div>
+                        <div class="menu-item-price">$25.00</div>
+                    </div>
+                    
+                    <div class="menu-list-item">
+                        <div class="menu-item-info">
+                            <h3 class="menu-item-name">Valenciana Authentica</h3>
+                            <p class="menu-item-desc">The classic authentic paella from Valencia with chicken and rabbit, flavored with saffron and rosemary.</p>
+                        </div>
+                        <div class="menu-item-price">$30.00</div>
+                    </div>
+                    
+                    <div class="menu-list-item">
+                        <div class="menu-item-info">
+                            <h3 class="menu-item-name">Negra <span class="menu-featured">Chef's Special</span></h3>
+                            <p class="menu-item-desc">A dramatic black paella made with squid ink, featuring seafood and a rich, complex flavor profile.</p>
+                        </div>
+                        <div class="menu-item-price">$35.00</div>
+                    </div>
+                    
+                    <div class="menu-list-item">
+                        <div class="menu-item-info">
+                            <h3 class="menu-item-name">Marinera</h3>
+                            <p class="menu-item-desc">Seafood paella with shrimp, mussels, and calamari, cooked in a rich fish broth with saffron.</p>
+                        </div>
+                        <div class="menu-item-price">$30.00</div>
+                    </div>
+                    
+                    <div class="menu-list-item">
+                        <div class="menu-item-info">
+                            <h3 class="menu-item-name">Castellana</h3>
+                            <p class="menu-item-desc">All-meat paella with chicken, pork, and Spanish chorizo, seasoned with paprika and herbs.</p>
+                        </div>
+                        <div class="menu-item-price">$23.00</div>
+                    </div>
+                    
+                    <div class="menu-list-item">
+                        <div class="menu-item-info">
+                            <h3 class="menu-item-name">Vegetarian</h3>
+                            <p class="menu-item-desc">Seasonal vegetables, artichokes, and beans cooked with saffron-infused broth.</p>
+                        </div>
+                        <div class="menu-item-price">$20.00</div>
+                    </div>
+                    
+                    <div class="menu-list-item">
+                        <div class="menu-item-info">
+                            <h3 class="menu-item-name">Add Lobster Chunks</h3>
+                            <p class="menu-item-desc">Enhance any paella with premium lobster chunks.</p>
+                        </div>
+                        <div class="menu-item-price">$8.00</div>
+                    </div>
+                </div>
+                
+                <div class="menu-note">
+                    <p><strong>Note:</strong> Minimum order of 10 servings per paella type. We recommend 1.5 servings per person for main course.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tapas Menu Section -->
+    <section class="section menu-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Spanish Tapas & Sides</h2>
+            <p class="text-center">Perfect for appetizers or to complement your paella.</p>
+            
+            <div class="row">
+                <div class="col col-6 col-md-12">
+                    <div class="menu-category">
+                        <div class="menu-list">
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Pig Roast</h3>
+                                    <p class="menu-item-desc">Slow-roasted pork with congri (Cuban rice and black beans) and maduros (sweet plantains).</p>
+                                </div>
+                                <div class="menu-item-price">$35.00</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Mexican Discada Tacos</h3>
+                                    <p class="menu-item-desc">Mixed meat tacos with chicken, shrimp, and pork, served with congri and maduros.</p>
+                                </div>
+                                <div class="menu-item-price">$20.00</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Pan con Tomate</h3>
+                                    <p class="menu-item-desc">Toasted bread rubbed with garlic and tomato, drizzled with olive oil and salt.</p>
+                                </div>
+                                <div class="menu-item-price">$2.75</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Gazpacho</h3>
+                                    <p class="menu-item-desc">Traditional cold Spanish soup made with ripe tomatoes, peppers, and cucumber.</p>
+                                </div>
+                                <div class="menu-item-price">$3.00</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Ensadilla Rusa</h3>
+                                    <p class="menu-item-desc">Spanish potato salad with tuna, carrots, peas, and mayonnaise.</p>
+                                </div>
+                                <div class="menu-item-price">$3.75</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Serrano Ham</h3>
+                                    <p class="menu-item-desc">Thinly sliced cured Spanish ham, served with bread.</p>
+                                </div>
+                                <div class="menu-item-price">$6.75</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Croquetas</h3>
+                                    <p class="menu-item-desc">Creamy ham or chicken croquettes, breaded and fried to golden perfection.</p>
+                                </div>
+                                <div class="menu-item-price">$3.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col col-6 col-md-12">
+                    <div class="menu-category">
+                        <div class="menu-list">
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Empanadas</h3>
+                                    <p class="menu-item-desc">Beef-filled pastries, seasoned with Spanish spices.</p>
+                                </div>
+                                <div class="menu-item-price">$3.25</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Flautas de Pollo</h3>
+                                    <p class="menu-item-desc">Crispy chicken taquitos served with salsa.</p>
+                                </div>
+                                <div class="menu-item-price">$3.50</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Ceviche</h3>
+                                    <p class="menu-item-desc">Fresh fish marinated in citrus juices with onions, peppers, and cilantro.</p>
+                                </div>
+                                <div class="menu-item-price">$4.00</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Shrimp in Garlic</h3>
+                                    <p class="menu-item-desc">Sautéed shrimp in garlic and olive oil.</p>
+                                </div>
+                                <div class="menu-item-price">$4.00</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Cocktail Shrimp</h3>
+                                    <p class="menu-item-desc">Chilled shrimp served with cocktail sauce.</p>
+                                </div>
+                                <div class="menu-item-price">$4.00</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Pinchos Morunos</h3>
+                                    <p class="menu-item-desc">Marinated pork skewers with Moorish spices.</p>
+                                </div>
+                                <div class="menu-item-price">$5.00</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Chorizo</h3>
+                                    <p class="menu-item-desc">Spanish sausage, grilled and served with bread.</p>
+                                </div>
+                                <div class="menu-item-price">$4.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-note">
+                <p><strong>Note:</strong> Tapas are priced per person. We recommend 3-5 tapas selections for a complete appetizer spread.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Items Section -->
+    <section class="section menu-section">
+        <div class="container">
+            <h2 class="section-title">Additional Offerings</h2>
+            
+            <div class="row">
+                <div class="col col-6 col-md-12">
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">More Tapas</h3>
+                        <div class="menu-list">
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Chori-Clams</h3>
+                                    <p class="menu-item-desc">Clams sautéed with chorizo in white wine sauce.</p>
+                                </div>
+                                <div class="menu-item-price">$4.25</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Papas Bravas</h3>
+                                    <p class="menu-item-desc">Crispy potatoes served with spicy tomato sauce.</p>
+                                </div>
+                                <div class="menu-item-price">$3.00</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Tortilla Española</h3>
+                                    <p class="menu-item-desc">Traditional Spanish omelet with potatoes and onions.</p>
+                                </div>
+                                <div class="menu-item-price">$3.75</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Plátanos Maduros</h3>
+                                    <p class="menu-item-desc">Sweet fried plantains.</p>
+                                </div>
+                                <div class="menu-item-price">$3.00</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Mussels Marinera</h3>
+                                    <p class="menu-item-desc">Mussels in a white wine and garlic sauce.</p>
+                                </div>
+                                <div class="menu-item-price">$3.50</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col col-6 col-md-12">
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">Sides & Extras</h3>
+                        <div class="menu-list">
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Chicken Fingers</h3>
+                                    <p class="menu-item-desc">Breaded chicken tenders served with fries.</p>
+                                </div>
+                                <div class="menu-item-price">$8.75</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Sangria Package</h3>
+                                    <p class="menu-item-desc">Traditional Spanish sangria made with red or white wine, fresh fruit, and brandy.</p>
+                                </div>
+                                <div class="menu-item-price">$12.00/person</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Spanish Dessert Platter</h3>
+                                    <p class="menu-item-desc">Assortment of traditional Spanish desserts including flan, churros, and almond cake.</p>
+                                </div>
+                                <div class="menu-item-price">$6.00/person</div>
+                            </div>
+                            
+                            <div class="menu-list-item">
+                                <div class="menu-item-info">
+                                    <h3 class="menu-item-name">Bread & Olive Oil Service</h3>
+                                    <p class="menu-item-desc">Fresh bread served with premium Spanish olive oil and sea salt.</p>
+                                </div>
+                                <div class="menu-item-price">$2.50/person</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dietary Information -->
+    <section class="section dietary-section">
+        <div class="container">
+            <h2 class="section-title">Dietary Information</h2>
+            <div class="row">
+                <div class="col col-8 col-md-12 offset-2 offset-md-0">
+                    <div class="dietary-content">
+                        <p>We understand that many guests have specific dietary requirements. We are happy to accommodate the following dietary needs with advance notice:</p>
+                        
+                        <ul class="dietary-list">
+                            <li><i class="fas fa-check-circle"></i> <strong>Vegetarian:</strong> Our Vegetarian Paella and many of our tapas are suitable for vegetarians.</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Vegan:</strong> We can prepare vegan versions of our Vegetarian Paella and select tapas upon request.</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Gluten-Free:</strong> Most of our paellas are naturally gluten-free. We can identify gluten-free tapas options.</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Allergies:</strong> Please inform us of any allergies when booking, and we will ensure safe preparation.</li>
+                        </ul>
+                        
+                        <p class="dietary-note">Please note that all dietary requests must be made at least 7 days prior to your event to ensure proper preparation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" style="background-image: url('paellapartypics/IMG-20250214-WA0060.jpg');">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Book Your Paella Party?</h2>
+                <p class="cta-text">Contact us today to discuss menu options for your special event.</p>
+                <a href="contact.html" class="cta-btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col col-4 col-md-6 col-sm-12">
+                    <div class="footer-logo">
+                        <span class="footer-logo-text">Paella Party NJ</span>
+                    </div>
+                    <p class="footer-desc">Authentic Spanish paella catering for all your special events. Bringing the taste of Spain to New Jersey for over 10 years.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col col-4 col-md-6 col-sm-12">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html">Home</a></li>
+                        <li class="footer-link"><a href="about.html">About Us</a></li>
+                        <li class="footer-link"><a href="menu.html">Our Menu</a></li>
+                        <li class="footer-link"><a href="gallery.html">Gallery</a></li>
+                        <li class="footer-link"><a href="services.html">Services</a></li>
+                        <li class="footer-link"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col col-4 col-md-6 col-sm-12">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li class="footer-link"><i class="fas fa-envelope"></i> info@paellapartynj.com</li>
+                        <li class="footer-link"><i class="fas fa-map-marker-alt"></i> Serving all of New Jersey</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Paella Party NJ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

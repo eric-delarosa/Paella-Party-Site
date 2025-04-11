@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Paella Party NJ</title>
+    <meta name="description" content="Contact Paella Party NJ for authentic Spanish paella catering for your special events. Serving all of New Jersey with over 40 years of culinary expertise.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Additional Contact Page Styles */
+        .contact-info-card {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+        
+        .contact-info-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--saffron-yellow);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-sm);
+        }
+        
+        .contact-info-icon i {
+            font-size: 1.5rem;
+            color: var(--charcoal);
+        }
+        
+        .contact-info-title {
+            text-align: center;
+            color: var(--navy-blue);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .contact-info-text {
+            text-align: center;
+            margin-bottom: 0;
+        }
+        
+        .contact-form-container {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: var(--navy-blue);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--radius-sm);
+            font-family: var(--body-font);
+            font-size: var(--body-size);
+            transition: border-color var(--transition-fast);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--saffron-yellow);
+        }
+        
+        .form-control.is-invalid {
+            border-color: #dc3545;
+        }
+        
+        .error-message {
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-top: 5px;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: var(--terracotta-red);
+            color: var(--white);
+            border: none;
+            padding: 12px 30px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color var(--transition-fast);
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--saffron-yellow);
+            color: var(--charcoal);
+        }
+        
+        .form-success {
+            text-align: center;
+            padding: var(--spacing-md);
+        }
+        
+        .form-success h3 {
+            color: var(--olive-green);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .booking-process {
+            background-color: var(--cream);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .booking-process-title {
+            text-align: center;
+            color: var(--navy-blue);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .booking-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .booking-step {
+            flex: 0 0 calc(25% - 20px);
+            text-align: center;
+            position: relative;
+        }
+        
+        .booking-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            right: -10px;
+            width: 20px;
+            height: 2px;
+            background-color: var(--medium-gray);
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--terracotta-red);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto var(--spacing-sm);
+        }
+        
+        .step-title {
+            font-weight: 700;
+            color: var(--navy-blue);
+            margin-bottom: 5px;
+        }
+        
+        .step-desc {
+            font-size: var(--small-size);
+            color: var(--dark-gray);
+        }
+        
+        .faq-section {
+            margin-top: var(--spacing-lg);
+        }
+        
+        .faq-item {
+            margin-bottom: var(--spacing-sm);
+            border-bottom: 1px solid var(--medium-gray);
+            padding-bottom: var(--spacing-sm);
+        }
+        
+        .faq-question {
+            color: var(--navy-blue);
+            margin-bottom: var(--spacing-xs);
+            cursor: pointer;
+            position: relative;
+            padding-right: 30px;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 1.5rem;
+            color: var(--terracotta-red);
+        }
+        
+        .faq-question.active::after {
+            content: '-';
+        }
+        
+        .faq-answer {
+            display: none;
+            padding-top: var(--spacing-xs);
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        @media (max-width: 991px) {
+            .booking-step {
+                flex: 0 0 calc(50% - 20px);
+                margin-bottom: var(--spacing-md);
+            }
+            
+            .booking-step:nth-child(2)::after {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .booking-step {
+                flex: 0 0 100%;
+            }
+            
+            .booking-step::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">Paella Party NJ</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="menu.html" class="nav-link">Our Menu</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                
+                <a href="contact.html" class="book-now-btn">Book Now</a>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner" style="background-image: url('paellapartypics/IMG-20250214-WA0060.jpg');">
+        <div class="container">
+            <h1 class="page-title">Contact Us</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>Contact</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="section contact-info-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="row">
+                <div class="col col-4 col-md-6 col-sm-12">
+                    <div class="contact-info-card fade-up">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3 class="contact-info-title">Phone</h3>
+                        <p class="contact-info-text">(555) 123-4567</p>
+                    </div>
+                </div>
+                
+                <div class="col col-4 col-md-6 col-sm-12">
+                    <div class="contact-info-card fade-up">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="contact-info-title">Email</h3>
+                        <p class="contact-info-text">info@paellapartynj.com</p>
+                    </div>
+                </div>
+                
+                <div class="col col-4 col-md-6 col-sm-12">
+                    <div class="contact-info-card fade-up">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="contact-info-title">Service Area</h3>
+                        <p class="contact-info-text">Serving all of New Jersey</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section contact-form-section">
+        <div class="container">
+            <div class="row">
+                <div class="col col-6 col-md-12">
+                    <div class="contact-form-container fade-right">
+                        <h2 class="section-title">Send Us a Message</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Your Name *</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" id="phone" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="event-type" class="form-label">Event Type</label>
+                                <select id="event-type" class="form-control">
+                                    <option value="">Select Event Type</option>
+                                    <option value="private">Private Event</option>
+                                    <option value="corporate">Corporate Event</option>
+                                    <option value="wedding">Wedding</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="event-date" class="form-label">Event Date</label>
+                                <input type="date" id="event-date" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="guests" class="form-label">Number of Guests</label>
+                                <input type="number" id="guests" class="form-control" min="1">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Your Message *</label>
+                                <textarea id="message" class="form-control" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <button type="submit" class="submit-btn">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col col-6 col-md-12">
+                    <div class="booking-process fade-left">
+                        <h3 class="booking-process-title">Our Booking Process</h3>
+                        <div class="booking-steps">
+                            <div class="booking-step">
+                                <div class="step-number">1</div>
+                                <h4 class="step-title">Inquiry</h4>
+                                <p class="step-desc">Fill out our contact form with your event details.</p>
+                            </div>
+                            
+                            <div class="booking-step">
+                                <div class="step-number">2</div>
+                                <h4 class="step-title">Consultation</h4>
+                                <p class="step-desc">We'll discuss your needs and create a customized proposal.</p>
+                            </div>
+                            
+                            <div class="booking-step">
+                                <div class="step-number">3</div>
+                                <h4 class="step-title">Confirmation</h4>
+                                <p class="step-desc">Secure your date with a deposit and signed agreement.</p>
+                            </div>
+                            
+                            <div class="booking-step">
+                                <div class="step-number">4</div>
+                                <h4 class="step-title">Celebration</h4>
+                                <p class="step-desc">Enjoy authentic Spanish paella at your event!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-section">
+                        <h3 class="section-title">Frequently Asked Questions</h3>
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <h4 class="faq-question">How far in advance should I book?</h4>
+                                <div class="faq-answer">
+                                    <p>We recommend booking at least 4-6 weeks in advance for most events, and 2-3 months for weddings and large corporate events, especially during peak season (May-September).</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <h4 class="faq-question">What is your service area?</h4>
+                                <div class="faq-answer">
+                                    <p>We serve the entire state of New Jersey, as well as select areas in New York City, Philadelphia, and Eastern Pennsylvania (additional travel fees may apply).</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <h4 class="faq-question">What is the minimum number of guests?</h4>
+                                <div class="faq-answer">
+                                    <p>Our minimum is typically 10 guests, but we can accommodate smaller groups with an adjusted pricing structure.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <h4 class="faq-question">Do you require a deposit?</h4>
+                                <div class="faq-answer">
+                                    <p>Yes, we require a 50% deposit to secure your date, with the balance due one week before the event.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Map Section -->
+    <section class="section map-section">
+        <div class="container">
+            <h2 class="section-title">Our Service Area</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1516285.8456129643!2d-75.56581231443496!3d40.12531281240533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c0fb959e00409f%3A0x2cd27b07f83f6d8d!2sNew%20Jersey!5e0!3m2!1sen!2sus!4v1650123456789!5m2!1sen!2sus" width="100%" height="450" style="border:0; border-radius: var(--radius-md);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col col-4 col-md-6 col-sm-12">
+                    <div class="footer-logo">
+                        <span class="footer-logo-text">Paella Party NJ</span>
+                    </div>
+                    <p class="footer-desc">Authentic Spanish paella catering for all your special events. Bringing the taste of Spain to New Jersey for over 10 years.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col col-4 col-md-6 col-sm-12">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html">Home</a></li>
+                        <li class="footer-link"><a href="about.html">About Us</a></li>
+                        <li class="footer-link"><a href="menu.html">Our Menu</a></li>
+                        <li class="footer-link"><a href="gallery.html">Gallery</a></li>
+                        <li class="footer-link"><a href="services.html">Services</a></li>
+                        <li class="footer-link"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col col-4 col-md-6 col-sm-12">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li class="footer-link"><i class="fas fa-envelope"></i> info@paellapartynj.com</li>
+                        <li class="footer-link"><i class="fas fa-map-marker-alt"></i> Serving all of New Jersey</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Paella Party NJ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    
+                    // Toggle active class on question
+                    this.classList.toggle('active');
+                    
+                    // Toggle active class on answer
+                    answer.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
