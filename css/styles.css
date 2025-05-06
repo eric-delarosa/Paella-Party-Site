@@ -462,6 +462,55 @@ img {
   font-size: var(--small-size);
 }
 
+/* To-Go Menu Table Styles */
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-lg); /* Increased margin above the table */
+    margin-bottom: var(--spacing-lg); /* Added margin below the table */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-md);
+    overflow: hidden; /* Ensures rounded corners apply to table content */
+}
+
+.menu-table th,
+.menu-table td {
+    padding: var(--spacing-md) var(--spacing-sm); /* Increased vertical padding */
+    padding: var(--spacing-md) var(--spacing-sm); /* Increased vertical padding */
+    border-bottom: 1px solid var(--light-gray);
+    color: var(--terracotta-red); /* Explicitly set text color for consistency */
+}
+
+.menu-table th {
+    background-color: var(--navy-blue);
+    color: var(--white);
+    font-family: var(--heading-font); /* Use heading font for distinctiveness */
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: var(--body-size); /* Slightly larger font size */
+}
+
+.menu-table tbody tr:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+.menu-table td:first-child {
+    font-weight: 600;
+    color: var(--navy-blue);
+}
+
+.price-cell {
+    text-align: center;
+    font-weight: 700;
+    color: var(--terracotta-red); /* Set price color */
+}
+
+.menu-table small {
+    font-weight: 400;
+    color: var(--white);
+}
+
+
 /* ===== Gallery Section ===== */
 .gallery-section {
   background-color: var(--white);
