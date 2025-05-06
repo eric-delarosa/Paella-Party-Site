@@ -55,9 +55,12 @@ function initNavigation() {
     
     navLinks.forEach(link => {
         const linkPath = link.getAttribute('href');
-        if (currentLocation.includes(linkPath) && linkPath !== '#') {
+        // Check if the current location ends with the link path for a more precise match
+        // Check if the current location exactly matches the link path or ends with the link path preceded by a slash
+        if (linkPath !== '#' && (currentLocation === linkPath || currentLocation.endsWith('/' + linkPath))) {
             link.classList.add('active');
         } else if (currentLocation.endsWith('/') && linkPath === 'index.html') {
+            // Special case for index.html when the URL is just the root
             link.classList.add('active');
         }
     });
