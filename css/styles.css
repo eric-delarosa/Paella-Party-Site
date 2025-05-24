@@ -466,8 +466,8 @@ img {
 .menu-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: var(--spacing-lg); /* Increased margin above the table */
-    margin-bottom: var(--spacing-lg); /* Added margin below the table */
+    margin-top: var(--spacing-sm); /* Further reduced margin above the table */
+    margin-bottom: var(--spacing-sm); /* Further reduced margin below the table */
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     border-radius: var(--radius-md);
     overflow: hidden; /* Ensures rounded corners apply to table content */
@@ -475,8 +475,7 @@ img {
 
 .menu-table th,
 .menu-table td {
-    padding: var(--spacing-md) var(--spacing-sm); /* Increased vertical padding */
-    padding: var(--spacing-md) var(--spacing-sm); /* Increased vertical padding */
+    padding: var(--spacing-xs) var(--spacing-sm); /* Further reduced vertical padding */
     border-bottom: 1px solid var(--light-gray);
     color: var(--terracotta-red); /* Explicitly set text color for consistency */
 }
@@ -1160,4 +1159,10 @@ textarea.form-control {
     .testimonials {
         padding: 30px 15px;
     }
+}
+/* Wedding Package Inclusions Header Style */
+.package-tier h5 {
+    font-size: 1.3rem; /* Slightly larger than h5, smaller than h4 */
+    color: var(--navy-blue); /* Match heading color */
+    margin-bottom: var(--spacing-xs); /* Adjust spacing */
 }
