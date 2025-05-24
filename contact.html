@@ -340,25 +340,25 @@
                 <div class="col col-6 col-md-12">
                     <div class="contact-form-container fade-right">
                         <h2 class="section-title">Send Us a Message</h2>
-                        <form class="contact-form" id="contactForm">
+                        <form class="contact-form" id="contactForm" action="https://formspree.io/f/mnndknpw" method="POST">
                             <div class="form-group">
                                 <label for="name" class="form-label">Your Name *</label>
-                                <input type="text" id="name" class="form-control" required>
+                                <input type="text" id="name" class="form-control" name="name" required>
                             </div>
                             
                             <div class="form-group">
                                 <label for="email" class="form-label">Email Address *</label>
-                                <input type="email" id="email" class="form-control" required>
+                                <input type="email" id="email" class="form-control" name="email" required>
                             </div>
                             
                             <div class="form-group">
                                 <label for="phone" class="form-label">Phone Number *</label>
-                                <input type="tel" id="phone" class="form-control" required>
+                                <input type="tel" id="phone" class="form-control" name="phone" required>
                             </div>
                             
                             <div class="form-group">
                                 <label for="event-type" class="form-label">Event Type</label>
-                                <select id="event-type" class="form-control">
+                                <select id="event-type" class="form-control" name="eventType">
                                     <option value="">Select Event Type</option>
                                     <option value="private">Private Event</option>
                                     <option value="corporate">Corporate Event</option>
@@ -369,17 +369,17 @@
                             
                             <div class="form-group">
                                 <label for="event-date" class="form-label">Event Date</label>
-                                <input type="date" id="event-date" class="form-control">
+                                <input type="date" id="event-date" class="form-control" name="eventDate">
                             </div>
                             
                             <div class="form-group">
                                 <label for="guests" class="form-label">Number of Guests</label>
-                                <input type="number" id="guests" class="form-control" min="1">
+                                <input type="number" id="guests" class="form-control" name="guests" min="1">
                             </div>
                             
                             <div class="form-group">
                                 <label for="message" class="form-label">Your Message *</label>
-                                <textarea id="message" class="form-control" required></textarea>
+                                <textarea id="message" class="form-control" name="message" required></textarea>
                             </div>
                             
                             <div class="form-group">

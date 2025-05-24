@@ -128,6 +128,7 @@ function initContactForm() {
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
+            // Prevent default form submission
             e.preventDefault();
             
             // Get form fields
@@ -135,6 +136,9 @@ function initContactForm() {
             const emailInput = document.getElementById('email');
             const phoneInput = document.getElementById('phone');
             const messageInput = document.getElementById('message');
+            const eventTypeInput = document.getElementById('event-type');
+            const eventDateInput = document.getElementById('event-date');
+            const guestsInput = document.getElementById('guests');
             
             // Simple validation
             let isValid = true;
@@ -170,16 +174,41 @@ function initContactForm() {
                 removeError(messageInput);
             }
             
-            // If form is valid, show success message
+            // If form is valid, submit via AJAX
             if (isValid) {
-                // In a real implementation, you would send the form data to a server here
-                // For now, we'll just show a success message
-                contactForm.innerHTML = `
-                    <div class="form-success">
-                        <h3>Thank you for your message!</h3>
-                        <p>We'll get back to you as soon as possible.</p>
-                    </div>
-                `;
+                const formData = new FormData(contactForm);
+                
+                fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Show success message
+                        contactForm.innerHTML = `
+                            <div class="form-success">
+                                <h3>Thank you for your message!</h3>
+                                <p>We'll get back to you as soon as possible.</p>
+                            </div>
+                        `;
+                    } else {
+                        // Handle errors
+                        response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                // Handle Formspree errors
+                                alert(data["errors"].map(error => error["message"]).join(", "));
+                            } else {
+                                alert('Oops! There was a problem submitting your form');
+                            }
+                        });
+                    }
+                })
+                .catch(error => {
+                    alert('Oops! There was a problem submitting your form');
+                });
             }
         });
     }
