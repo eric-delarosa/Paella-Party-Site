@@ -19,130 +19,6 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    
-    <style>
-        /* Additional Gallery Page Styles */
-        .gallery-container {
-            padding: var(--spacing-md) 0;
-        }
-        
-        .gallery-filter {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: var(--spacing-md);
-        }
-        
-        .gallery-filter-btn {
-            padding: 8px 20px;
-            background-color: var(--light-gray);
-            border: none;
-            cursor: pointer;
-            margin: 5px;
-            border-radius: var(--radius-sm);
-            font-weight: 600;
-            transition: all var(--transition-fast);
-        }
-        
-        .gallery-filter-btn.active,
-        .gallery-filter-btn:hover {
-            background-color: var(--saffron-yellow);
-            color: var(--charcoal);
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            grid-gap: 20px;
-        }
-        
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: var(--radius-sm);
-            height: 250px;
-            cursor: pointer;
-            transition: transform var(--transition-medium);
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .gallery-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform var(--transition-medium);
-        }
-        
-        .gallery-item:hover .gallery-img {
-            transform: scale(1.05);
-        }
-        
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity var(--transition-medium);
-        }
-        
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-        
-        .gallery-icon {
-            color: var(--white);
-            font-size: 2rem;
-        }
-        
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-        }
-        
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-        }
-        
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: var(--white);
-            font-size: 3rem;
-            cursor: pointer;
-        }
-        
-        @media (max-width: 767px) {
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -177,7 +53,7 @@
     </header>
 
     <!-- Page Banner -->
-    <section class="page-banner" style="background-color: #F0F0F0;">
+    <section class="page-banner">
         <div class="container">
             <h1 class="page-title">Gallery</h1>
             <div class="breadcrumbs">
@@ -226,8 +102,8 @@
                     </div>
                 </div>
                 
-                <div class="gallery-item paella" onclick="openLightbox('paellapartypics/IMG-20250214-WA0010.jpg')">
-                    <img src="paellapartypics/IMG-20250214-WA0010.jpg" alt="Mixed Paella" class="gallery-img">
+                <div class="gallery-item paella" onclick="openLightbox('paellapartypics/hero-paella-event.jpg')">
+                    <img src="paellapartypics/hero-paella-event.jpg" alt="Mixed Paella" class="gallery-img">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus gallery-icon"></i>
                     </div>
@@ -367,7 +243,7 @@
     </section> -->
 
     <!-- CTA Section -->
-    <section class="section cta-section" style="background-image: url('paellapartypics\PXL_20250222_173017502.PORTRAIT.jpg');">
+    <section class="section cta-section" style="background-image: url('paellapartypics\cta-background-paella.jpg');">
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Ready to Create Your Own Paella Memories?</h2>
