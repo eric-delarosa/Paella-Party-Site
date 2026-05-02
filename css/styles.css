@@ -1151,6 +1151,45 @@ textarea.form-control {
     border-bottom: none;
 }
 
+.package-promo {
+    border: 2px solid var(--terracotta-red);
+    background: linear-gradient(135deg, rgba(255, 237, 204, 0.95), rgba(255, 223, 186, 0.9));
+    box-shadow: 0 15px 30px rgba(198, 70, 0, 0.18);
+    padding: 30px;
+}
+
+.special-promo-row {
+    margin-top: 3rem;
+}
+
+.promo-badge {
+    display: inline-block;
+    background-color: var(--terracotta-red);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+}
+
+.package-promo h4 {
+    color: var(--navy-blue);
+    margin-top: 0;
+}
+
+.package-promo ul li {
+    color: var(--charcoal);
+    border-bottom: 1px dashed #eee;
+    padding: 10px 0;
+}
+
+.package-promo ul li:last-child {
+    border-bottom: none;
+}
+
 /* Testimonials Section */
 .testimonials {
     margin-top: 60px;
