@@ -299,18 +299,20 @@ img {
   margin-top: 70px; /* To account for fixed header */
 }
 
-.hero::before {
+.hero::before,
+.cta-section::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
 
-.hero-content {
+.hero-content,
+.cta-content {
   position: relative;
   z-index: 2;
   color: var(--white);
@@ -318,6 +320,42 @@ img {
   max-width: 800px;
   margin: 0 auto;
   padding: var(--spacing-md);
+}
+
+.cta-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cta-section .section-title,
+.cta-section p,
+.cta-section .btn {
+  color: var(--white);
+}
+
+.cta-section .btn {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--navy-blue);
+  border-radius: var(--radius-sm);
+  padding: 12px 30px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.cta-section .btn:hover {
+  background-color: var(--saffron-yellow);
+  color: var(--charcoal);
+}
+
+.hero-title {
+  font-size: 4rem;
+  color: var(--white);
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-title {
